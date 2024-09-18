@@ -1,22 +1,23 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import {AppBar,
-    Box,
-    CssBaseline,
-    Divider,
-    Drawer,
-    IconButton,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText,
-    Toolbar,
-    Typography,
-    Button,
-} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
+import {
+	AppBar,
+	Box,
+	CssBaseline,
+	Divider,
+	Drawer,
+	IconButton,
+	List,
+	ListItem,
+	ListItemButton,
+	ListItemText,
+	Toolbar,
+	Typography,
+	Button,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import logo from "../assets/logo.svg";
+import logo from "../assets/dogLogo.svg";
 // import logo from "../assets/dogLogo.webp";
 import { useNavigate } from "react-router-dom"; // Utiliser useNavigate à la place de Navigate
 
@@ -56,9 +57,17 @@ const Header = (props) => {
 	return (
 		<Box sx={{ display: "flex" }}>
 			<CssBaseline />
-			<AppBar component="nav" sx={{ backgroundColor: "#660C0B" }}>
-			{/* <AppBar component="nav" sx={{ backgroundColor: "#DF921A" }}> */}
-				<Toolbar>
+			{/* <AppBar component="nav" sx={{ backgroundColor: "#660C0B" }}> */}
+			<AppBar
+				component="nav"
+				sx={{
+					backgroundColor: "#EBC5A1",
+					height: "56px",
+					padding: 0,
+					zIndex: 1000,
+				}}
+			>
+				<Toolbar sx={{ minHeight: "56px", padding: "0 16px" }}>
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"
@@ -72,10 +81,9 @@ const Header = (props) => {
 						<img
 							src={logo}
 							alt="logo"
-							style={{ height: "40px", marginRight: "16px" }}
+							style={{ height: "30px", marginRight: "16px" }}
 						/>
 					</Box>
-					
 				</Toolbar>
 			</AppBar>
 			<nav>
