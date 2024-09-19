@@ -123,15 +123,16 @@ const HomePage = () => {
       
       <input type="file" accept="image/*" onChange={handleFileChange} />
 
-      <Button variant="contained" sx={{ mt: 2 }} onClick={handleUpload}>
-        Upload and Recognize
-      </Button>
 
       {imageUrl && (
         <Box mt={4}>
           <img src={imageUrl} alt="Uploaded Dog" style={{ maxHeight: "300px", borderRadius: "8px" }} />
         </Box>
       )}
+      
+      <Button variant="contained" sx={{ mt: 2 }} onClick={handleUpload}>
+        Reconnaître
+      </Button>
 
       {dogBreeds.breed1 && (
         <Box mt={4}>
